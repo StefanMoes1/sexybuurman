@@ -1,7 +1,0 @@
-```plantuml
-@startuml 
-ernie -> bert : hallo
-Bert -> ernie : hallo
-ernie -> bert : keal wat mooi
-
-@enduml
