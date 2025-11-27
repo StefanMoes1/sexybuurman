@@ -1,0 +1,8 @@
+[book]
+authors = ["StefanMoes1"]
+language = "en"
+src = "src"
+title = "Sexybuurvrouw"
+
+[preprocessor.plantuml]
+plantuml-cmd="http://localhost:8081"
