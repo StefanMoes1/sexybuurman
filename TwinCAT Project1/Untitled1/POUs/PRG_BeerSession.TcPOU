@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="PRG_BeerSession" Id="{76912403-e508-47d1-9c5d-44804af3e56e}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_BeerSession
+VAR
+    T_Biertje : TON;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF Aangekomen AND NOT AvondKlaar THEN
+    IF Biertjes < 5 THEN
+        T_Biertje(IN := TRUE, PT := T#4S);
+
+        IF T_Biertje.Q THEN
+            Biertjes := Biertjes + 1;
+            T_Biertje(IN := FALSE);
+        END_IF
+    END_IF
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_BeerSession">
+      <LineId Id="8" Count="8" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

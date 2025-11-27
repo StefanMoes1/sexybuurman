@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <Task Name="task3" Id="{006c9b51-0d73-43b5-b156-68abf0a4b175}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>10000</CycleTime>
+    <Priority>23</Priority>
+    <PouCall>
+      <Name>PRG_GameSession</Name>
+    </PouCall>
+    <TaskFBGuid>{b2533487-3e05-4029-9708-112bdea0d451}</TaskFBGuid>
+    <Fb_init>{3a50053f-4f2a-4405-b7e8-c3fa04f23ec7}</Fb_init>
+    <Fb_exit>{0ef3ad51-5d7b-4939-9e9f-6b776d28df4c}</Fb_exit>
+    <CycleUpdate>{754acbc3-71d6-4630-92b8-467bb60e99a2}</CycleUpdate>
+    <PostCycleUpdate>{ff9a0554-da6e-4c6a-952d-8e8fdf7e27e3}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

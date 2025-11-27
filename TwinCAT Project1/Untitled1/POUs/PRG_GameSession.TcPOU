@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="PRG_GameSession" Id="{84fb9743-b88f-4f77-87db-d0a8d16619d2}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_GameSession
+VAR
+    T_Ronde : TON;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF (Biertjes >= 3) AND NOT SpelGestart THEN
+    SpelGestart := TRUE;
+END_IF
+
+IF SpelGestart AND (Ronde < 10) THEN
+    T_Ronde(IN := TRUE, PT := T#4S);
+
+    IF T_Ronde.Q THEN
+        Ronde := Ronde + 1;
+        T_Ronde(IN := FALSE);
+    END_IF
+END_IF
+
+IF Ronde >= 10 THEN
+    AvondKlaar := TRUE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_GameSession">
+      <LineId Id="8" Count="14" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

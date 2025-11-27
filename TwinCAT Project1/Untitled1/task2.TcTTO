@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <Task Name="task2" Id="{8ab446d0-b8ad-4195-8e10-c6fc84680cb4}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>10000</CycleTime>
+    <Priority>22</Priority>
+    <PouCall>
+      <Name>PRG_BeerSession</Name>
+    </PouCall>
+    <TaskFBGuid>{9820bbe6-26f6-4500-adaa-b5f7c1797b4b}</TaskFBGuid>
+    <Fb_init>{bcf74789-7b8d-405c-a4d7-47109c539704}</Fb_init>
+    <Fb_exit>{c22533c9-0eed-4c9a-abed-b43afa728559}</Fb_exit>
+    <CycleUpdate>{e32614c5-84b0-49cc-b7e0-db2e2750b580}</CycleUpdate>
+    <PostCycleUpdate>{735f8cb1-2974-4990-a30d-0e1d1896cc8e}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <GVL Name="GVL" Id="{c0ece6c9-4a99-4dff-881c-d145713c02f1}">
+    <Declaration><![CDATA[VAR_GLOBAL
+    (* Treinreis *)
+    ReisGestart      : BOOL := FALSE;
+    OverstapBereikt  : BOOL := FALSE;
+    Aangekomen       : BOOL := FALSE;
+
+    (* Bier *)
+    Biertjes         : UINT := 0;
+
+    (* Spel *)
+    SpelGestart      : BOOL := FALSE;
+    Ronde            : UINT := 0;
+
+    (* Avond *)
+    AvondKlaar       : BOOL := FALSE;
+END_VAR
+]]></Declaration>
+  </GVL>
+</TcPlcObject>

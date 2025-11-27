@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.65">
+	<Project ProjectGUID="{0BE40C3C-8E7D-451F-B182-41275FB2620D}" TargetNetId="39.231.85.117.1.1" Target64Bit="true" ShowHideConfigurations="#x6">
+		<System>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+				<Task Id="4" Priority="1" CycleTime="100000" AmsPort="351" AdtTasks="true">
+					<Name>Task 4</Name>
+				</Task>
+				<Task Id="5" Priority="21" CycleTime="100000" AmsPort="352" AdtTasks="true">
+					<Name>task1</Name>
+				</Task>
+				<Task Id="6" Priority="22" CycleTime="100000" AmsPort="353" AdtTasks="true">
+					<Name>task2</Name>
+				</Task>
+				<Task Id="7" Priority="23" CycleTime="100000" AmsPort="354" AdtTasks="true">
+					<Name>task3</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{B8F50B34-7A60-4882-8DC1-B792958B09C1}" Name="Untitled1" PrjFilePath="Untitled1\Untitled1.plcproj" TmcFilePath="Untitled1\Untitled1.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{C71E5319-047A-E666-EB5D-0FEAFD82D012}">
+					<Name>Untitled1 Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>Task_4</Name>
+							<ManualConfig>
+								<OTCID>#x02010040</OTCID>
+							</ManualConfig>
+							<Priority>1</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+						<Context>
+							<Id>1</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+						<Context>
+							<Id>2</Id>
+							<Name>task1</Name>
+							<ManualConfig>
+								<OTCID>#x02010050</OTCID>
+							</ManualConfig>
+							<Priority>21</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+						<Context>
+							<Id>3</Id>
+							<Name>task2</Name>
+							<ManualConfig>
+								<OTCID>#x02010060</OTCID>
+							</ManualConfig>
+							<Priority>22</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+						<Context>
+							<Id>4</Id>
+							<Name>task3</Name>
+							<ManualConfig>
+								<OTCID>#x02010070</OTCID>
+							</ManualConfig>
+							<Priority>23</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="1" OTCID="#x08502005"/>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+						<TaskPouOid Prio="21" OTCID="#x08502002"/>
+						<TaskPouOid Prio="22" OTCID="#x08502003"/>
+						<TaskPouOid Prio="23" OTCID="#x08502004"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+	</Project>
+</TcSmProject>

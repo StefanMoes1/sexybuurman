@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="PRG_TrainTrip" Id="{48fdd4a2-deb6-4363-bf79-eb00b958c29f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_TrainTrip
+VAR
+    T_Overstap : TON;
+    T_Aankomst : TON;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF NOT ReisGestart THEN
+    ReisGestart := TRUE;
+END_IF
+
+(* Trein naar overstap *)
+IF ReisGestart AND NOT OverstapBereikt THEN
+    T_Overstap(IN := TRUE, PT := T#5S);
+
+    IF T_Overstap.Q THEN
+        OverstapBereikt := TRUE;
+        T_Overstap(IN := FALSE);
+    END_IF
+END_IF
+
+(* Trein naar eindbestemming *)
+IF OverstapBereikt AND NOT Aangekomen THEN
+    T_Aankomst(IN := TRUE, PT := T#5S);
+
+    IF T_Aankomst.Q THEN
+        Aangekomen := TRUE;
+        T_Aankomst(IN := FALSE);
+    END_IF
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_TrainTrip">
+      <LineId Id="12" Count="21" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
